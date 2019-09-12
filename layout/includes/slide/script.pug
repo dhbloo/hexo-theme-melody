@@ -1,5 +1,5 @@
-script(src=url_for("https://cdn.jsdelivr.net/npm/reveal.js@3.6.0/lib/js/head.min.js"))
-script(src=url_for("https://cdn.jsdelivr.net/npm/reveal.js@3.6.0/js/reveal.min.js"))
+//- script(src=url_for("https://cdn.jsdelivr.net/npm/reveal.js@3.8.0/lib/js/head.min.js"))
+script(src=url_for("https://cdn.jsdelivr.net/npm/reveal.js@3.8.0/js/reveal.min.js"))
 
 - var slide = page.slide || theme.slide
 - var defaultSlide = theme.slide
@@ -10,16 +10,19 @@ script(src=url_for("https://cdn.jsdelivr.net/npm/reveal.js@3.6.0/js/reveal.min.j
 - var parallaxBackgroundSize = slide.parallaxBackgroundSize || defaultSlide.parallaxBackgroundSize
 - var parallaxBackgroundHorizontal = slide.parallaxBackgroundHorizontal || defaultSlide.parallaxBackgroundHorizontal
 - var parallaxBackgroundVertical = slide.parallaxBackgroundVertical || defaultSlide.parallaxBackgroundVertical
+- var slideNumber = slide.slideNumber || defaultSlide.slideNumber
 
 script.
   Reveal.initialize({
-    mouseWheel: !{mouseWheel},
+    mouseWheel: '!{mouseWheel}',
     transition: '!{transition}',
     transitionSpeed: '!{transitionSpeed}',
     parallaxBackgroundImage: '!{parallaxBackgroundImage}',
     parallaxBackgroundSize: '!{parallaxBackgroundSize}',
     parallaxBackgroundHorizontal: '!{parallaxBackgroundHorizontal}',
     parallaxBackgroundVertical: '!{parallaxBackgroundVertical}',
+    slideNumber: '!{slideNumber}',
+    showNotes: false,
     markdown: {
       smartypants: true
     },
