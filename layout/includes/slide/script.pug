@@ -11,6 +11,7 @@ script(src=url_for("https://cdn.jsdelivr.net/npm/reveal.js@3.8.0/js/reveal.min.j
 - var parallaxBackgroundHorizontal = slide.parallaxBackgroundHorizontal || defaultSlide.parallaxBackgroundHorizontal
 - var parallaxBackgroundVertical = slide.parallaxBackgroundVertical || defaultSlide.parallaxBackgroundVertical
 - var slideNumber = slide.slideNumber || defaultSlide.slideNumber
+- var showNotes = slide.showNotes || defaultSlide.showNotes
 
 script.
   Reveal.initialize({
@@ -22,7 +23,7 @@ script.
     parallaxBackgroundHorizontal: '!{parallaxBackgroundHorizontal}',
     parallaxBackgroundVertical: '!{parallaxBackgroundVertical}',
     slideNumber: '!{slideNumber}',
-    showNotes: false,
+    showNotes: '!{showNotes}',
     markdown: {
       smartypants: true
     },
